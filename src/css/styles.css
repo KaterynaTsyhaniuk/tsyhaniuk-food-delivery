@@ -9,5 +9,4 @@
 @import url('./base.css');
 @import url('./container.css');
 @import url('./header.css');
-
-/* Sections style */
+@import url('./about.css'); /* Sections style */
