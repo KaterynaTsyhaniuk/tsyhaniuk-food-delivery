@@ -144,7 +144,7 @@
 
   .image-border-container {
     border-radius: 50%; /* Округлення картинки */
-    border: 26px solid #ffe550; /* Бордер з кольором */
+    border: 14px solid #ffe550; /* Бордер з кольором */
     background-color: #fff; /* Заповнення всередині */
   }
 
@@ -190,5 +190,9 @@
     position: relative;
     width: 100%;
     margin: 0 auto;
+  }
+
+  .image-border-container {
+    border: 26px solid #ffe550; /* Бордер з кольором */
   }
 }
