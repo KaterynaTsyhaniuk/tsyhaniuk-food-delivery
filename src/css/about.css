@@ -1,18 +1,34 @@
-@media only screen and (max-width: 767px) {
-  .projects-wrapper-image {
-    display: none;
-  }
+.about-container {
+  position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
-.about-container {
+.about-order-nav {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  padding: 6px 17px;
+  width: 98px;
+  height: 32px;
+  background-color: #bbf330;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.5;
+  text-align: right;
+  color: #2c2c2c;
+}
+
+.about-order-nav:hover,
+.about-order-nav:focus,
+.about-order-nav:active {
+  background-color: #ffe450;
 }
 
 .about-main-text {
   padding-top: 60px;
-  padding-left: 4px;
-  padding-right: 4px;
 }
 
 .about-title {
@@ -33,56 +49,146 @@
   width: 280px;
 }
 
-.about-order-nov {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 30px;
-  padding: 6px 17px;
-  width: 98px;
-  height: 32px;
-  background-color: #bbf330;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 500;
-  font-size: 13px;
-  line-height: 1.5;
-  text-align: right;
-  color: #2c2c2c;
-}
-
-@media only screen and (min-width: 768px) {
-  .about-title {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    font-size: 42px;
-    line-height: 1.2;
-    color: #2c2c2c;
-    width: 537px;
-  }
-  .about-text {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.5;
-    color: #2c2c2c;
-  }
-
-  .about-main-text {
-    padding-top: 60px;
-    width: 537px;
+/* Для мобільних пристроїв */
+@media screen and (max-width: 767px) {
+  .about-container {
+    display: flex;
+    flex-direction: column;
   }
 
   .projects-wrapper-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-right: 32px;
+    display: none; /* Приховуємо картинку на малих екранах */
   }
 
+  .about-main-text {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1279px) {
+  .about-main-text {
+    position: relative;
+    z-index: 1; /* Текст буде під картинкою */
+    width: 336px;
+  }
+
+  .about-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    width: 537px;
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 44px;
+  }
+
+  .about-text {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 40px;
+  }
+
+  .projects-wrapper-image {
+    position: absolute;
+    top: 149px;
+    left: 50%;
+    transform: translateX(10%); /* Центрування картинки */
+    z-index: 2; /* Картинка буде поверх тексту */
+    max-width: 320px;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .projects-wrapper-image .swiper-container {
+    overflow: hidden;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  .swiper-button-next {
+    right: 1px !important; /* Позиціюємо кнопку наступного слайду на правому краю бордера */
+  }
+
+  .swiper-button-prev {
+    left: 1px !important; /* Позиціюємо кнопку попереднього слайду на лівому краю бордера */
+  }
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    font-size: 20px;
+    color: #2c2c2c;
+  }
+
+  .projects-wrapper-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    box-sizing: border-box;
+  }
+
+  .image-border-container {
+    border-radius: 50%; /* Округлення картинки */
+    border: 26px solid #ffe550; /* Бордер з кольором */
+    background-color: #fff; /* Заповнення всередині */
+  }
+
+  .image-border-container:hover,
+  .image-border-container:focus,
+  .image-border-container:active {
+    border: 26px solid #bbf330;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
   .about-container {
     display: flex;
-    flex-direction: row;
-    width: 704px;
+  }
+  .about-main-text {
+    padding-top: 159px;
+    width: 520px;
+    margin-right: 143px;
+  }
+
+  .about-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 28px;
+  }
+
+  .about-text {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 40px;
+    width: 516px;
+  }
+
+  .image-border-container {
+    margin-top: 14px;
+  }
+  .projects-wrapper-image {
+    max-width: 580px;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
   }
 }
