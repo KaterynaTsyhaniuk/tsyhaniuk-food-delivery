@@ -123,11 +123,11 @@
   }
 
   .swiper-button-next {
-    right: 1px !important; /* Позиціюємо кнопку наступного слайду на правому краю бордера */
+    right: -12px !important; /* Позиціюємо кнопку наступного слайду на правому краю бордера */
   }
 
   .swiper-button-prev {
-    left: 1px !important; /* Позиціюємо кнопку попереднього слайду на лівому краю бордера */
+    left: -12px !important; /* Позиціюємо кнопку попереднього слайду на лівому краю бордера */
   }
   .swiper-button-next::after,
   .swiper-button-prev::after {
@@ -194,5 +194,13 @@
 
   .image-border-container {
     border: 26px solid #ffe550; /* Бордер з кольором */
+  }
+
+  .swiper-button-next {
+    right: 1px !important; /* Позиціюємо кнопку наступного слайду на правому краю бордера */
+  }
+
+  .swiper-button-prev {
+    left: 1px !important; /* Позиціюємо кнопку попереднього слайду на лівому краю бордера */
   }
 }
