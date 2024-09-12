@@ -1,0 +1,230 @@
+.service-container {
+  background-image: url(../img/service-background/Rectangle\ 694-min.png);
+
+  background-position: center; /* Вирівнює зображення по центру контейнера */
+  background-repeat: no-repeat; /* Вимикає повторення зображення */
+  background-size: cover;
+  background-position: top center;
+}
+
+.tab-image {
+  display: none;
+}
+
+.service-image-box {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  transform: translateY(+30px);
+}
+
+.service-image-box img {
+  margin-bottom: 60px;
+}
+
+.service-title {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  color: #2c2c2c;
+  margin-bottom: 28px;
+}
+
+.service-text {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.43;
+  color: #2c2c2c;
+  width: 280px;
+  margin-bottom: 28px;
+}
+
+.service-icon-title {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #2c2c2c;
+  margin-bottom: 16px;
+}
+.service-icon-text {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.43;
+  color: #2c2c2c;
+  margin-bottom: 24px;
+}
+
+.service-icon-box {
+  margin-bottom: 28px;
+}
+
+.service-svg {
+  border-radius: 50%;
+  background-color: #fff;
+  margin-bottom: 8px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-order-nav {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  border: 2px solid #7eb101;
+  border-radius: 30px;
+
+  width: 106px;
+  height: 40px;
+  background-color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #2c2c2c;
+  margin-right: 24px;
+  cursor: pointer;
+  margin-bottom: 72px;
+}
+
+.service-order-nav:hover,
+.service-order-nav:focus,
+.service-order-nav:active {
+  background-color: #bbf330;
+  border: 2px solid #bbf330;
+}
+
+.service-read-more {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #000;
+  cursor: pointer;
+  margin-bottom: 72px;
+}
+
+.service-links {
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+
+.service-links svg {
+  width: 15px;
+  height: 14px;
+  vertical-align: middle;
+  /* Якщо потрібно трохи підняти або опустити іконку */
+  transform: translateY(-1px);
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1279px) {
+  .service-container {
+    background-image: url(../img/service-background/Rectangle-tab718-min.png);
+
+    background-position: center; /* Вирівнює зображення по центру контейнера */
+    background-repeat: no-repeat; /* Вимикає повторення зображення */
+    background-size: cover;
+    background-position: top center;
+    transform: translateY(-70px);
+  }
+
+  .service-text-content {
+    margin-left: 16px;
+  }
+
+  .tab-image {
+    display: block;
+  }
+
+  .service-icon-text {
+    width: 288px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .service-image-box img {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 80px;
+    margin-bottom: 60px;
+  }
+
+  .tab-image {
+    margin-left: 29px;
+    transform: translateY(+115px);
+  }
+
+  .tab-image-small {
+    margin-left: 44px;
+    transform: translateY(+180px);
+  }
+
+  .service-title {
+    font-weight: 700;
+    font-size: 42px;
+    width: 526px;
+    margin-bottom: 20px;
+  }
+
+  .service-text {
+    font-size: 16px;
+    line-height: 1.5;
+    width: 500px;
+  }
+
+  .service-icon-box {
+    display: flex;
+    gap: 80px;
+  }
+
+  .service-order-nav {
+    margin-bottom: 88px;
+  }
+
+  .service-read-more {
+    margin-bottom: 88px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .service-container {
+    background-image: url(../img/service-background/Rectangle-desctop694-min.png);
+    background-position: center; /* Вирівнює зображення по центру контейнера */
+    background-repeat: no-repeat; /* Вимикає повторення зображення */
+    background-size: cover;
+    background-position: top center;
+    transform: translateY(-150px);
+  }
+
+  .service-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .service-image-box {
+    margin-right: 60px;
+  }
+  .first-icon-box,
+  .second-icon-box,
+  .service-icon-text {
+    width: 253px;
+  }
+  .service-text-content {
+    margin-top: 260px;
+  }
+  .service-order-nav {
+    margin-bottom: 79px;
+  }
+
+  .service-read-more {
+    display: none;
+  }
+}

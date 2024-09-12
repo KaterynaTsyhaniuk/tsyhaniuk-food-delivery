@@ -20,11 +20,13 @@
 .burger-button {
   background-color: transparent;
   border: none;
-  fill: #7eb101;
+  color: #7eb101;
 }
 
-.burger-button:active {
-  fill: #ffe450;
+.burger-button:active,
+.burger-button:hover,
+.burger-button:focus {
+  color: #ffe450;
 }
 
 @media only screen and (max-width: 767px) {

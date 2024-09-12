@@ -19,6 +19,7 @@
   line-height: 1.5;
   text-align: right;
   color: #2c2c2c;
+  margin-bottom: 50px;
 }
 
 .about-order-nav:hover,
@@ -85,6 +86,7 @@
   }
 
   .about-text {
+    width: 336px;
     font-size: 16px;
     line-height: 1.5;
     margin-bottom: 40px;
@@ -99,40 +101,51 @@
     max-width: 320px;
     width: 100%;
   }
-}
-
-@media only screen and (min-width: 768px) {
-  .projects-wrapper-image .swiper-container {
-    overflow: hidden;
-  }
-
-  .swiper-button-next,
-  .swiper-button-prev {
+  .about-button-next,
+  .about-button-prev {
+    width: 26px;
+    height: 20px;
+    cursor: pointer;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: transparent;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
     z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 
-  .swiper-button-next {
-    right: -12px !important; /* Позиціюємо кнопку наступного слайду на правому краю бордера */
+  /* Наступна кнопка справа */
+  .about-button-next {
+    right: -12px;
+    border-radius: 4px;
+    background-color: #fefefe;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.06);
+    padding: 4px;
+
+    /* Налаштуйте відповідно до дизайну */
   }
 
-  .swiper-button-prev {
-    left: -12px !important; /* Позиціюємо кнопку попереднього слайду на лівому краю бордера */
+  /* Попередня кнопка зліва */
+  .about-button-prev {
+    left: -12px;
+    border-radius: 4px;
+    background-color: #fefefe;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.06);
+    padding: 4px;
+
+    /* Налаштуйте відповідно до дизайну */
   }
-  .swiper-button-next::after,
-  .swiper-button-prev::after {
-    font-size: 20px;
-    color: #2c2c2c;
+}
+
+@media only screen and (min-width: 768px) {
+  .about-order-nav {
+    margin-bottom: 16px;
+  }
+
+  .projects-wrapper-image .swiper-container {
+    overflow: hidden;
   }
 
   .projects-wrapper-image img {
@@ -151,7 +164,7 @@
   .image-border-container:hover,
   .image-border-container:focus,
   .image-border-container:active {
-    border: 26px solid #bbf330;
+    border: 14px solid #bbf330;
   }
 }
 
@@ -196,11 +209,44 @@
     border: 26px solid #ffe550; /* Бордер з кольором */
   }
 
-  .swiper-button-next {
-    right: 1px !important; /* Позиціюємо кнопку наступного слайду на правому краю бордера */
+  .image-border-container:hover,
+  .image-border-container:focus,
+  .image-border-container:active {
+    border: 26px solid #bbf330;
   }
 
-  .swiper-button-prev {
-    left: 1px !important; /* Позиціюємо кнопку попереднього слайду на лівому краю бордера */
+  .about-button-next,
+  .about-button-prev {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Наступна кнопка справа */
+  .about-button-next {
+    right: -10px;
+    border-radius: 8px;
+    background-color: #fefefe;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.06);
+    padding: 4px;
+
+    /* Налаштуйте відповідно до дизайну */
+  }
+
+  /* Попередня кнопка зліва */
+  .about-button-prev {
+    left: -10px;
+    border-radius: 8px;
+    background-color: #fefefe;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.06);
+    padding: 4px;
+
+    /* Налаштуйте відповідно до дизайну */
   }
 }
