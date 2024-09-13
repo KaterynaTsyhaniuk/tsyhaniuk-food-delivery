@@ -21,6 +21,7 @@
   background-color: transparent;
   border: none;
   color: #7eb101;
+  transition: color 250ms linear cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .burger-button:active,
@@ -69,6 +70,7 @@
     text-decoration: underline;
     text-decoration-skip-ink: none;
     color: #bbf330;
+    transition: color 250ms linear cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .header-item-home:hover,
@@ -104,6 +106,7 @@
     line-height: 1.5;
     text-align: right;
     color: #2c2c2c;
+    transition: background-color 250ms linear cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .header-order-nav:hover,

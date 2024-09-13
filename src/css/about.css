@@ -20,6 +20,7 @@
   text-align: right;
   color: #2c2c2c;
   margin-bottom: 50px;
+  transition: background-color 250ms linear cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .about-order-nav:hover,
@@ -159,12 +160,18 @@
     border-radius: 50%; /* Округлення картинки */
     border: 14px solid #ffe550; /* Бордер з кольором */
     background-color: #fff; /* Заповнення всередині */
+    transition: border 250ms linear cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .image-border-container:hover,
   .image-border-container:focus,
   .image-border-container:active {
     border: 14px solid #bbf330;
+  }
+
+  .about-button-next:active,
+  .about-button-prev:active {
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.16);
   }
 }
 

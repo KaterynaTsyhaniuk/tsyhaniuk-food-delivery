@@ -78,7 +78,7 @@
   align-items: center;
   border: 2px solid #7eb101;
   border-radius: 30px;
-
+  transition: background-color 250ms linear cubic-bezier(0.4, 0, 0.2, 1);
   width: 106px;
   height: 40px;
   background-color: #fff;
