@@ -9,7 +9,7 @@
   <script type="module" crossorigin src="/tsyhaniuk-food-delivery/index.js"></script>
   <link rel="modulepreload" crossorigin href="/tsyhaniuk-food-delivery/assets/vendor-3fWI2qbq.js">
   <link rel="stylesheet" crossorigin href="/tsyhaniuk-food-delivery/assets/vendor-HdWFjXwp.css">
-  <link rel="stylesheet" crossorigin href="/tsyhaniuk-food-delivery/assets/index-BTj0h78b.css">
+  <link rel="stylesheet" crossorigin href="/tsyhaniuk-food-delivery/assets/index-CnY2wjyS.css">
 </head>
 
 <body>
@@ -21,9 +21,9 @@
                     <img src="/tsyhaniuk-food-delivery/assets/logo-foodSta-BmrgLb0C.svg" alt="Website logo" width="66" height="52">
                 </a>
 
-                <button type="button" class="burger-button" aria-label="Open menu navigation">
+                <button type="button" id="menu-open" class="burger-button" aria-label="Open menu navigation">
                     <svg class="burger-button-svg" width="28" height="28">
-                        <use href="/tsyhaniuk-food-delivery/assets/icon-DOOVB3oX.svg#icon-burger-menu"></use>
+                        <use href="/tsyhaniuk-food-delivery/assets/icon-BWgpjrCM.svg#icon-burger-menu"></use>
                     </svg>
                 </button>
 
@@ -31,7 +31,7 @@
                     <li class="header-item-home"><a href="./index.html">Home</a></li>
                     <li class="header-item"><a href="#about">About</a></li>
                     <li class="header-item"><a href="#service">Service</a></li>
-                    <li class="header-item"><a href="">Menu</a></li>
+                    <li class="header-item"><a href="#menu">Menu</a></li>
                     <li class="header-item"><a href="">Contact</a></li>
 
                 </ul>
@@ -160,7 +160,7 @@
                 <div class="first-icon-box">
                     <div class="service-svg">
                         <svg width="32" height="32">
-                            <use href="/tsyhaniuk-food-delivery/assets/icon-DOOVB3oX.svg#icon-rocket"></use>
+                            <use href="/tsyhaniuk-food-delivery/assets/icon-BWgpjrCM.svg#icon-rocket"></use>
                         </svg>
                     </div>
                     <h3 class="service-icon-title">Fasest Delivery</h3>
@@ -171,7 +171,7 @@
                 <div class="second-icon-box">
                     <div class="service-svg">
                         <svg width="32" height="32">
-                            <use href="/tsyhaniuk-food-delivery/assets/icon-DOOVB3oX.svg#icon-touch"></use>
+                            <use href="/tsyhaniuk-food-delivery/assets/icon-BWgpjrCM.svg#icon-touch"></use>
                         </svg>
                     </div>
                     <h3 class="service-icon-title">Easy To Order</h3>
@@ -188,7 +188,7 @@
                 <div class="service-read-more">
                     <a href="">Read more</a>
                     <svg width="15" height="14">
-                        <use href="/tsyhaniuk-food-delivery/assets/icon-DOOVB3oX.svg#icon-arrow-right"></use>
+                        <use href="/tsyhaniuk-food-delivery/assets/icon-BWgpjrCM.svg#icon-arrow-right"></use>
                     </svg>
                 </div>
             </div>
@@ -196,9 +196,106 @@
 
     </div>
 </section>
+    <section class="menu-food" id="menu">
+    <div class="container">
+        <h2 class="menu-title">Some of Our Favorites</h2>
+        <p class="menu-text">Looking for something delicious?</p>
+        <ul class="menu-img-list">
+            <li class="menu-img-item">
+                <picture>
+                    <source
+                        srcset="/tsyhaniuk-food-delivery/assets/gamburger-d-min-CiT-2sP8.png 1x, /tsyhaniuk-food-delivery/assets/gamburger-d@2x-min-CTlrfpbR.png 2x"
+                        media="(min-width:1280px)" />
+                    <source
+                        srcset="/tsyhaniuk-food-delivery/assets/gamburger-t-min-CBPv1LKw.png 1x, /tsyhaniuk-food-delivery/assets/gamburger-t@2x-min-B-9mjVLf.png 2x"
+                        media="(min-width:768px)" />
+                    <source
+                        srcset="/tsyhaniuk-food-delivery/assets/gamburger-m-min-B5g-dtre.png 1x, /tsyhaniuk-food-delivery/assets/gamburger-m@2x-min-Bxa_VUw-.png 2x"
+                        media="(max-width:767px)" />
+                    <img src="/tsyhaniuk-food-delivery/assets/gamburger-m-min-B5g-dtre.png" alt="Gamburger" />
+                </picture>
+            </li>
+            <li class="menu-img-item">
+                <picture>
+                    <source srcset="/tsyhaniuk-food-delivery/assets/Pasta-d-min-CKP_RP2N.png 1x, /tsyhaniuk-food-delivery/assets/Pasta-d@2x-min-CK-rh7YY.png 2x"
+                        media="(min-width: 1280px)">
+                    <source srcset="/tsyhaniuk-food-delivery/assets/Pasta-t-min-Czq1y4Xs.png 1x, /tsyhaniuk-food-delivery/assets/Pasta-t@2x-min-F35cjgry.png 2x"
+                        media="(min-width: 768px)">
+                    <source srcset="/tsyhaniuk-food-delivery/assets/Pasta-m-min-CKB9rJmC.png 1x, /tsyhaniuk-food-delivery/assets/Pasta-m@2x-min--JocYumD.png 2x"
+                        media="(max-width: 767px)">
+                    <img src="/tsyhaniuk-food-delivery/assets/Pasta-m-min-CKB9rJmC.png" alt="Pasta" />
+                </picture>
+            </li>
+            <li class="menu-img-item">
+                <picture>
+                    <source srcset="/tsyhaniuk-food-delivery/assets/pizza-d-min-8wheV1Rj.png 1x, /tsyhaniuk-food-delivery/assets/pizza-d@2x-min-DpaL2kPA.png 2x"
+                        media="(min-width: 1280px)">
+                    <source srcset="/tsyhaniuk-food-delivery/assets/pizza-t-min-DmhRjUjP.png 1x, /tsyhaniuk-food-delivery/assets/pizza-t@2x-min-AyRY6-Hg.png 2x"
+                        media="(min-width: 768px)">
+                    <source srcset="/tsyhaniuk-food-delivery/assets/pizza-m-min-DdELHBXK.png 1x, /tsyhaniuk-food-delivery/assets/pizza-m@2x-min-BJ0l4ryz.png 2x"
+                        media="(max-width: 767px)">
+                    <img src="/tsyhaniuk-food-delivery/assets/pizza-m-min-DdELHBXK.png" alt="Pizza" />
+                </picture>
+            </li>
+            <li class="menu-img-item">
+                <picture>
+                    <source srcset="/tsyhaniuk-food-delivery/assets/chicken-d-min-ChWPHuT1.png 1x, /tsyhaniuk-food-delivery/assets/chicken-d@2x-min-CQd3ZJNH.png 2x"
+                        media="(min-width: 1280px)">
+                    <source srcset="/tsyhaniuk-food-delivery/assets/chicken-t-min-xpWiN5uP.png 1x, /tsyhaniuk-food-delivery/assets/chicken-t@2x-min-CU9SD8a_.png 2x"
+                        media="(min-width: 768px)">
+
+                    <img src="/tsyhaniuk-food-delivery/assets/chicken-t-min-xpWiN5uP.png" alt="Chicken" />
+                </picture>
+            </li>
+            <li class="menu-img-item">
+                <picture>
+                    <source srcset="/tsyhaniuk-food-delivery/assets/salat-d-min-DShwDLoq.png 1x, /tsyhaniuk-food-delivery/assets/salat-d@2x-min-BvKqgvn7.png 2x"
+                        media="(min-width: 1280px)">
+                    <source srcset="/tsyhaniuk-food-delivery/assets/salat-t-min-8-CSiGcm.png 1x, /tsyhaniuk-food-delivery/assets/salat-t@2x-min-B1EHZ027.png 2x"
+                        media="(min-width: 768px)">
+
+                    <img src="/tsyhaniuk-food-delivery/assets/salat-t-min-8-CSiGcm.png" alt="Salat" />
+                </picture>
+            </li>
+            <li class="menu-img-item">
+                <picture>
+                    <source srcset="/tsyhaniuk-food-delivery/assets/borshch-d-min-tN7xa3WU.png 1x, /tsyhaniuk-food-delivery/assets/borshch-d@2x-min-DTAmH67F.png 2x"
+                        media="(min-width: 1280px)">
+                    <source srcset="/tsyhaniuk-food-delivery/assets/borshch-t-min-Db8Widik.png 1x, /tsyhaniuk-food-delivery/assets/borshch-t@2x-min-C_o9fy-p.png 2x"
+                        media="(min-width: 768px)">
+
+                    <img src="/tsyhaniuk-food-delivery/assets/borshch-t-min-Db8Widik.png" alt="Borshch" />
+                </picture>
+            </li>
+
+
+        </ul>
+    </div>
+
+</section>
   </main>
 
-  <load />
+  <div id="mobile-menu-wrapper" class="mobile-menu-wrapper"></div>
+<div id="mobile-menu" class="mobile-menu" aria-hidden="true" role="navigation">
+    <div class="mobile-menu-container">
+        <button class="mobile-menu-close" id="menu-close" type="button" aria-label="Close menu">
+            <svg width="24" height="24">
+                <use href="/tsyhaniuk-food-delivery/assets/icon-BWgpjrCM.svg#icon-close-btn"></use>
+            </svg>
+        </button>
+        <div class="mobile-menu-content">
+            <ul class="mobile-menu-list">
+                <li><a class="mobile-menu-link mobile-menu-link-home" href="/src/index.html">Home</a></li>
+                <li><a class="mobile-menu-link" href="">About</a></li>
+                <li><a class="mobile-menu-link" href="">Service</a></li>
+                <li><a class="mobile-menu-link" href="">Menu</a></li>
+                <li><a class="mobile-menu-link" href="">Contact</a></li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+</div>
 
 </body>
 
