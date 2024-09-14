@@ -1,3 +1,5 @@
+'use strict';
+
 document.addEventListener('DOMContentLoaded', () => {
   const modal = document.getElementById('menu-modal');
   const modalTitle = document.getElementById('menu-modal-title');
