@@ -179,7 +179,7 @@
     cursor: pointer;
   }
 
-  .image-border-container-menu-modal {
+  .menu-modal-img {
     overflow: hidden;
     border-radius: 50%;
     border: 14px solid #ffe550;
