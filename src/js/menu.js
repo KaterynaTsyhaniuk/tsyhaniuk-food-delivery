@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         openModal();
       } else {
-        console.log('Модальне вікно не відкривається на мобільних пристроях.');
+        console.error('Image source not found');
       }
     });
   });
