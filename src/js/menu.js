@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const modal = document.getElementById('menu-modal');
   const modalTitle = document.getElementById('menu-modal-title');
   const modalText = document.getElementById('menu-modal-text');
-  const modalImg = document.querySelector('.menu-modal-img');
+  const modalImg = document.querySelector('.image-border-container-menu-modal');
   const body = document.body;
 
   function openModal() {
