@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const imgSrc = item.getAttribute('data-modal-img');
         modalImg.innerHTML = `<img src="${imgSrc}" alt="${item.getAttribute(
-          'data-modal-title'
+          'data-modal-img'
         )}" />`;
 
         openModal();
