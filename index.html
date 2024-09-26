@@ -6,15 +6,21 @@
   <link rel="icon" type="image/svg+xml" href="./img/foodSta.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FoodSta</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Kalam:wght@300;400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
   <script type="module" crossorigin src="/tsyhaniuk-food-delivery/index.js"></script>
-  <link rel="modulepreload" crossorigin href="/tsyhaniuk-food-delivery/assets/vendor-3fWI2qbq.js">
-  <link rel="stylesheet" crossorigin href="/tsyhaniuk-food-delivery/assets/vendor-HdWFjXwp.css">
-  <link rel="stylesheet" crossorigin href="/tsyhaniuk-food-delivery/assets/index-BbfL37ny.css">
+  <link rel="modulepreload" crossorigin href="/tsyhaniuk-food-delivery/assets/vendor-CXXxgQAV.js">
+  <link rel="stylesheet" crossorigin href="/tsyhaniuk-food-delivery/assets/vendor-CTkdz8MY.css">
+  <link rel="stylesheet" crossorigin href="/tsyhaniuk-food-delivery/assets/index-USexXRcS.css">
 </head>
 
 <body>
   <header class="page-header-foodStr">
-    <div class="container">
+    <div class="container container-header">
         <nav class="page-nav-foodStr">
             <div class="page-nav">
                 <a class="header-logo-link" href="./index.html" aria-label="Website logo">
@@ -29,30 +35,42 @@
 
                 <ul class="header-list">
                     <li class="header-item-home"><a href="./index.html">Home</a></li>
-                    <li class="header-item"><a href="#about">About</a></li>
+                    <li class="header-item"><a href="#hero">About</a></li>
                     <li class="header-item"><a href="#service">Service</a></li>
                     <li class="header-item"><a href="#menu">Menu</a></li>
-                    <li class="header-item"><a href="">Contact</a></li>
+                    <li class="header-item"><a href="#subscribe">Contact</a></li>
 
                 </ul>
-            </div>
-            <div class="order-box">
+
                 <a href="" class="header-order-nav">Order Now</a>
+
             </div>
+
         </nav>
+
+
     </div>
+
+
 </header>
+
+
+<button type="button" aria-label="Back to Top button" class="back-to-top-btn">
+    <svg class="back-to-top-btn-icon" width="20" height="20">
+        <use href="../img/up-icon.svg#icon-icon-up"></use>
+    </svg>
+</button>
 
   <main>
 
-    <section class="about" id="about">
-    <div class="container about-container">
-        <div class="about-main-text">
-            <h2 class="about-title">Enjoy Your Favorite Food From Anywhere</h2>
-            <p class="about-text">With just a few clicks, you can have your favorite meals delivered straight to your
+    <section class="hero" id="hero">
+    <div class="container hero-container">
+        <div class="hero-main-text">
+            <h2 class="hero-title">Enjoy Your Favorite Food From Anywhere</h2>
+            <p class="hero-text">With just a few clicks, you can have your favorite meals delivered straight to your
                 doorstep, no matter where you are.
                 Order now and enjoy a hassle-free and delicious meal from the comfort of your own home.</p>
-            <a href="" class="about-order-nav">Order Now</a>
+            <a href="" class="hero-order-nav">Order Now</a>
 
         </div>
 
@@ -77,8 +95,7 @@
                                 <source
                                     srcset="/tsyhaniuk-food-delivery/assets/foto-desctop-min-DhPhXj6z.png 1x, /tsyhaniuk-food-delivery/assets/foto-desctop@2x-min-DW8ox9bx.png 2x"
                                     media="(min-width: 1280px)" />
-                                <source
-                                    srcset="/tsyhaniuk-food-delivery/assets/foto-tab-min-CMGFPRl-.png 1x, /tsyhaniuk-food-delivery/assets/foto-tab@2x-min-CmSav1XN.png 2x"
+                                <source srcset="/tsyhaniuk-food-delivery/assets/foto-tab-min-CMGFPRl-.png 1x, /tsyhaniuk-food-delivery/assets/foto-tab@2x-min-CmSav1XN.png 2x"
                                     media="(max-width: 768px)" />
                                 <img src="/tsyhaniuk-food-delivery/assets/foto-tab-min-CMGFPRl-.png" alt="meat-ball">
                             </picture>
@@ -96,12 +113,12 @@
                         </li>
                     </ul>
 
-                    <svg class="about-button-prev" width="39" height="31">
+                    <svg class="hero-button-prev" width="39" height="31">
                         <use href="/tsyhaniuk-food-delivery/assets/next-prev-xxfTO8fd.svg#icon-Vector-prev"></use>
                     </svg>
 
 
-                    <svg class="about-button-next" width="39" height="31">
+                    <svg class="hero-button-next" width="39" height="31">
                         <use href="/tsyhaniuk-food-delivery/assets/next-prev-xxfTO8fd.svg#icon-Vector-next"></use>
                     </svg>
 
@@ -186,7 +203,7 @@
                     <a href="">Order Now</a>
                 </div>
                 <div class="service-read-more">
-                    <a href="">Read more</a>
+                    <a href="#menu">Read more</a>
                     <svg width="15" height="14">
                         <use href="/tsyhaniuk-food-delivery/assets/icon-BWgpjrCM.svg#icon-arrow-right"></use>
                     </svg>
@@ -313,8 +330,164 @@
     </div>
 
 </div>
-  </main>
+    <section class="customer" id="customer">
+    <div class="container customer-container">
+        <h2 class="customer-title">What our Customers Say</h2>
+        <p class="customer-text">Don't just take our word for it - see what our satisfied customers have to say</p>
+        <ul class="customer-list">
+            <li class="customer-item">
+                <img class="star-image" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGUAAAAQCAMAAAA4TUGPAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAJcEhZcwAACxMAAAsTAQCanBgAAABCUExURUdwTP/lUP/lUP/jUP/nUP/mUP/jUP/lUP/fUP/lUP/fUP/kUP/kUP/kUP/kUP/lUP/jUP/mUP/kUP/lUP/kUP/lULZcmFsAAAAVdFJOUwCfz0Agv4DfEO8gYKBwMK+Qr4+wv1sqEaMAAACTSURBVDjLtdRJDsQgDERRkwCGDD3/+1+1F2lBOtlWvOOpFpYo2WybG6OdRo530jmmxgiUY0qOAcjHmBqLA/WwjRLnEJJXAOqQnq/5EtwefdzM9Bj9HyYzuwDjsINh+vVDj48GS/9BPTbZd0SNY5PdRZDj2mTtMTkmwLMD7x6TY6XmYpah9pgai3+2rsXFS78PSvwCz7UyamaY8lQAAAAASUVORK5CYII=" alt="star rating" />
+                <p class="text-item-customer">“The Best app I have used to order food in a while, so many options to
+                    choose from too, I would recommend to a freind,
+                    No questions asked”</p>
+                <div class="avatar-customer-box">
 
+                    <picture class="image-box-customer">
+                        <source srcset="data:image/png;base64,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 1x, /tsyhaniuk-food-delivery/assets/men-ava@2x-min-l1OxkhGr.png 2x"
+                            media="(min-width:320px)" />
+                        <img src="data:image/png;base64,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" alt="customers avatar" />
+                    </picture>
+
+                    <div class="text-box-customer">
+                        <p class="first-text-customer">Simon Vaker</p>
+                        <p class="second-text-customer">guest</p>
+                    </div>
+
+
+
+
+
+                </div>
+            </li>
+            <li class="customer-item">
+                <img class="star-image" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGUAAAAQCAMAAAA4TUGPAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAJcEhZcwAACxMAAAsTAQCanBgAAABCUExURUdwTP/lUP/lUP/jUP/nUP/mUP/jUP/lUP/fUP/lUP/fUP/kUP/kUP/kUP/kUP/lUP/jUP/mUP/kUP/lUP/kUP/lULZcmFsAAAAVdFJOUwCfz0Agv4DfEO8gYKBwMK+Qr4+wv1sqEaMAAACTSURBVDjLtdRJDsQgDERRkwCGDD3/+1+1F2lBOtlWvOOpFpYo2WybG6OdRo530jmmxgiUY0qOAcjHmBqLA/WwjRLnEJJXAOqQnq/5EtwefdzM9Bj9HyYzuwDjsINh+vVDj48GS/9BPTbZd0SNY5PdRZDj2mTtMTkmwLMD7x6TY6XmYpah9pgai3+2rsXFS78PSvwCz7UyamaY8lQAAAAASUVORK5CYII=" alt="star rating" />
+                <p class="text-item-customer">“The ease with which I can just go in and order what i want was amazing,
+                    It has been a very pleasant experience ordering
+                    from this app”</p>
+                <div class="avatar-customer-box">
+                    <div class="image-box-customer">
+                        <picture">
+                            <source srcset="../img/customer/women-ava-min.png 1x ./img/customer/women-ava@2x-min.png 2x"
+                                media="(min-width:320px)" />
+                            <img src="../img/customer/women-ava-min.png" alt="customers avatar" />
+                            </picture>
+                    </div>
+                    <div class="text-box-customer">
+                        <p class="first-text-customer">Robin Lunney</p>
+                        <p class="second-text-customer">guest</p>
+                    </div>
+
+                </div>
+            </li>
+
+        </ul>
+    </div>
+</section>
+    <section class="subscribe-section" id="subscribe">
+    <div class="container subscribe-container">
+        <div class="subscribe-content-box">
+            <div class="subscribe-picture">
+                <picture>
+                    <source srcset="/tsyhaniuk-food-delivery/assets/banan-min-X_yppGgx.png 1x, /tsyhaniuk-food-delivery/assets/banan@2x-min-C8Isx6pL.png 2x"
+                        media="(min-width: 1280px)" />
+                    <source srcset="/tsyhaniuk-food-delivery/assets/banana-tab-min-CIX5cfN0.png 1x, /tsyhaniuk-food-delivery/assets/banana-tab@2x-min-tkiWCaED.png 2x"
+                        media="(min-width: 768px)" />
+                    <source srcset="/tsyhaniuk-food-delivery/assets/banana-mob-min-DEmuAxDV.png 1x, /tsyhaniuk-food-delivery/assets/banana-mob@2x-min-CsmpJTnU.png 2x"
+                        media="(max-width: 767px)" />
+                    <img src="../img/subscribe/banana-mob-min.png" alt="banana" />
+                </picture>
+            </div>
+            <div class="text-form-box">
+                <h2 class="subscribe-title">Subscribe To Get Special Offers</h2>
+                <p class="subscribe-text">Order now and receive 10% off your first meal with Enjoy Your Favorite Food
+                    From
+                    Anywhere.</p>
+
+
+                <form class="subscribe-form" novalidate>
+                    <div class="input-form-box">
+                        <input autocomplete="off" type="email" name="email" id="email" placeholder="Enter your email"
+                            pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" required class="form-input-mail"
+                            aria-label="Your email" />
+                        <datalist id="email-list"></datalist>
+                        <span class="valid-notification"></span>
+                    </div>
+                    <button type="submit" class="form-submit-btn" aria-label="submit">
+                        Subscribe
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="email-backdrop is-hidden">
+            <div class="email-modal">
+                <button type="button" class="modal-close-btn" aria-label="close-btn">
+                    <svg class="modal-close-icon" width="20" hight="20">
+                        <use href="/tsyhaniuk-food-delivery/assets/icon-BWgpjrCM.svg#icon-close-btn"></use>
+                    </svg>
+                </button>
+                <div class="modal-content-box">
+                    <h2>Welcome to us</h2>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+  </main>
+  <section class="footer-food" id="footer-food">
+    <div class="container footer-food-container">
+        <div class="footer-nav-form-box">
+            <div class="footer-nav">
+                <a class="footer-logo-link" href="./index.html" aria-label="Website logo">
+                    <img src="/tsyhaniuk-food-delivery/assets/logo-foodSta-BmrgLb0C.svg" alt="Website logo" width="66" height="52">
+                </a>
+
+                <ul class="footer-list">
+                    <li class="footer-item-home"><a href="./index.html">Home</a></li>
+                    <li class="footer-item"><a href="#about">About</a></li>
+                    <li class="footer-item"><a href="#customer">Reviews</a></li>
+                    <li class="footer-item"><a href="#menu">Menu</a></li>
+                    <li class="footer-item"><a href="">Contact</a></li>
+
+                </ul>
+            </div>
+
+            <form class="subscribe-footer-form" novalidate>
+                <h3 class="title-form-footer">Subscribe</h3>
+                <div class="footer-input-form-box">
+                    <input autocomplete="off" type="email" name="email" id="email" placeholder="Enter your email"
+                        pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" required class="footer-form-input-mail"
+                        aria-label="Your email" />
+                    <datalist id="email-list"></datalist>
+                    <span class="valid-notification"></span>
+
+                    <button type="submit" class="footer-form-submit-btn" aria-label="submit">
+                        Subscribe
+                    </button>
+                </div>
+                <p class="first-footer-text">By subscribing you agree to with our <span class="footer-link">Privacy
+                        Policy</span></p>
+            </form>
+        </div>
+
+
+        <div class="footer-link-boks">
+            <ul class="footer-list-link">
+                <li class="footer-list-item">
+                    <a class="footer-link" href="">Privacy Policy</a>
+                </li>
+                <li class="footer-list-item">
+                    <a class="footer-link" href="">Terms of Service</a>
+                </li>
+                <li class="footer-list-item">
+                    <a class="footer-link" href="">Cookies Settings</a>
+                </li>
+            </ul>
+            <p class="second-footer-text">2022 FoodSta. All right reserved.</p>
+        </div>
+    </div>
+</section>
   <div id="mobile-menu-wrapper" class="mobile-menu-wrapper"></div>
 <div id="mobile-menu" class="mobile-menu" aria-hidden="true" role="navigation">
     <div class="mobile-menu-container">
@@ -325,11 +498,14 @@
         </button>
         <div class="mobile-menu-content">
             <ul class="mobile-menu-list">
-                <li><a class="mobile-menu-link mobile-menu-link-home" href="/src/index.html">Home</a></li>
-                <li><a class="mobile-menu-link" href="">About</a></li>
-                <li><a class="mobile-menu-link" href="">Service</a></li>
-                <li><a class="mobile-menu-link" href="">Menu</a></li>
-                <li><a class="mobile-menu-link" href="">Contact</a></li>
+                <li class="menu-item"><a class="mobile-menu-link mobile-menu-link-top active"
+                        href="/src/index.html">Home</a></li>
+                <li class="menu-item"><a class="mobile-menu-link active" href="#hero">About</a></li>
+                <li class="menu-item"><a class="mobile-menu-link active" href="#service">Service</a></li>
+                <li class="menu-item"><a class="mobile-menu-link active" href="#menu">Menu</a></li>
+                <li class="menu-item"><a class="mobile-menu-link mobile-menu-link-bottom active "
+                        href="#subscribe">Contact</a>
+                </li>
             </ul>
 
         </div>
