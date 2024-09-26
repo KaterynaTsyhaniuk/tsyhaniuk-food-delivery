@@ -1,0 +1,51 @@
+<section class="subscribe-section" id="subscribe">
+    <div class="container subscribe-container">
+        <div class="subscribe-content-box">
+            <div class="subscribe-picture">
+                <picture>
+                    <source srcset="./img/subscribe/banan-min.png 1x, ./img/subscribe/banan@2x-min.png 2x"
+                        media="(min-width: 1280px)" />
+                    <source srcset="./img/subscribe/banana-tab-min.png 1x, ./img/subscribe/banana-tab@2x-min.png 2x"
+                        media="(min-width: 768px)" />
+                    <source srcset="./img/subscribe/banana-mob-min.png 1x, ./img/subscribe/banana-mob@2x-min.png 2x"
+                        media="(max-width: 767px)" />
+                    <img src="../img/subscribe/banana-mob-min.png" alt="banana" />
+                </picture>
+            </div>
+            <div class="text-form-box">
+                <h2 class="subscribe-title">Subscribe To Get Special Offers</h2>
+                <p class="subscribe-text">Order now and receive 10% off your first meal with Enjoy Your Favorite Food
+                    From
+                    Anywhere.</p>
+
+
+                <form class="subscribe-form" novalidate>
+                    <div class="input-form-box">
+                        <input autocomplete="off" type="email" name="email" id="email" placeholder="Enter your email"
+                            pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" required class="form-input-mail"
+                            aria-label="Your email" />
+                        <datalist id="email-list"></datalist>
+                        <span class="valid-notification"></span>
+                    </div>
+                    <button type="submit" class="form-submit-btn" aria-label="submit">
+                        Subscribe
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="email-backdrop is-hidden">
+            <div class="email-modal">
+                <button type="button" class="modal-close-btn" aria-label="close-btn">
+                    <svg class="modal-close-icon" width="20" hight="20">
+                        <use href="./img/icon.svg#icon-close-btn"></use>
+                    </svg>
+                </button>
+                <div class="modal-content-box">
+                    <h2>Welcome to us</h2>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>

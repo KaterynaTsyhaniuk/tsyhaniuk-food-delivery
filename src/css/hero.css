@@ -1,10 +1,11 @@
-.about-container {
+.hero-container {
+  padding: 60px 20px 50px 20px;
   position: relative;
-  max-width: 1280px;
+  min-width: 320px;
   margin: 0 auto;
 }
 
-.about-order-nav {
+.hero-order-nav {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,69 +14,50 @@
   width: 98px;
   height: 32px;
   background-color: #bbf330;
-  font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 13px;
-  line-height: 1.5;
   text-align: right;
-  color: #2c2c2c;
-  margin-bottom: 50px;
-  transition: background-color 250ms linear cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 300ms ease;
 }
 
-.about-order-nav:hover,
-.about-order-nav:focus,
-.about-order-nav:active {
+.hero-order-nav:hover,
+.hero-order-nav:focus,
+.hero-order-nav:active {
   background-color: #ffe450;
 }
 
-.about-main-text {
-  padding-top: 60px;
-}
-
-.about-title {
-  font-family: 'Roboto', sans-serif;
+.hero-title {
   font-weight: 700;
   font-size: 28px;
-  color: #2c2c2c;
   margin-bottom: 28px;
 }
 
-.about-text {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
+.hero-text {
   font-size: 14px;
   line-height: 1.43;
-  color: #2c2c2c;
   margin-bottom: 32px;
   width: 280px;
 }
 
-/* Для мобільних пристроїв */
 @media screen and (max-width: 767px) {
-  .about-container {
+  .hero-container {
     display: flex;
     flex-direction: column;
   }
 
   .projects-wrapper-image {
-    display: none; /* Приховуємо картинку на малих екранах */
-  }
-
-  .about-main-text {
-    padding-left: 4px;
-    padding-right: 4px;
+    display: none;
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1279px) {
-  .about-main-text {
+  .hero-main-text {
     position: relative;
     z-index: 1; /* Текст буде під картинкою */
     width: 336px;
   }
 
-  .about-title {
+  .hero-title {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -86,10 +68,8 @@
     margin-bottom: 44px;
   }
 
-  .about-text {
+  .hero-text {
     width: 336px;
-    font-size: 16px;
-    line-height: 1.5;
     margin-bottom: 40px;
   }
 
@@ -100,10 +80,9 @@
     transform: translateX(10%); /* Центрування картинки */
     z-index: 2; /* Картинка буде поверх тексту */
     max-width: 320px;
-    width: 100%;
   }
-  .about-button-next,
-  .about-button-prev {
+  .hero-button-next,
+  .hero-button-prev {
     width: 26px;
     height: 20px;
     cursor: pointer;
@@ -117,50 +96,49 @@
     text-align: center;
   }
 
-  /* Наступна кнопка справа */
-  .about-button-next {
+  .hero-button-next {
     right: -12px;
     border-radius: 4px;
     background-color: #fefefe;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.06);
     padding: 4px;
-
-    /* Налаштуйте відповідно до дизайну */
   }
 
-  /* Попередня кнопка зліва */
-  .about-button-prev {
+  .hero-button-prev {
     left: -12px;
     border-radius: 4px;
     background-color: #fefefe;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.06);
     padding: 4px;
-
-    /* Налаштуйте відповідно до дизайну */
   }
 }
 
 @media only screen and (min-width: 768px) {
-  .about-order-nav {
+  .hero-container {
+    padding: 60px 32px 40px 32px;
+  }
+  .hero-order-nav {
     margin-bottom: 16px;
   }
 
   .projects-wrapper-image .swiper-container {
+    border-radius: 50%;
+    border: 14px;
     overflow: hidden;
+    object-fit: cover;
   }
 
   .projects-wrapper-image img {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
-    box-sizing: border-box;
   }
 
   .image-border-container {
-    border-radius: 50%; /* Округлення картинки */
-    border: 14px solid #ffe550; /* Бордер з кольором */
-    background-color: #fff; /* Заповнення всередині */
-    transition: border 250ms linear cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 50%;
+    border: 14px solid #ffe550;
+    background-color: #fff;
+    transition: border 300ms ease;
   }
 
   .image-border-container:hover,
@@ -169,23 +147,32 @@
     border: 14px solid #bbf330;
   }
 
-  .about-button-next:active,
-  .about-button-prev:active {
+  .hero-button-next:active,
+  .hero-button-prev:active {
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.16);
+  }
+
+  .hero-text {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 40px;
   }
 }
 
 @media only screen and (min-width: 1280px) {
-  .about-container {
+  .hero-container {
+    padding: 0 32px 0 32px;
     display: flex;
   }
-  .about-main-text {
+
+  .hero-main-text {
     padding-top: 159px;
-    width: 520px;
-    margin-right: 143px;
+    width: 511px;
+    height: 213px;
+    margin-right: 125px;
   }
 
-  .about-title {
+  .hero-title {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -195,25 +182,19 @@
     margin-bottom: 28px;
   }
 
-  .about-text {
-    font-size: 16px;
-    line-height: 1.5;
+  .hero-text {
     margin-bottom: 40px;
-    width: 516px;
+    width: 511px;
   }
 
   .image-border-container {
     margin-top: 14px;
+    border: 26px solid #ffe550;
   }
   .projects-wrapper-image {
-    max-width: 580px;
+    max-width: 608px;
     position: relative;
-    width: 100%;
     margin: 0 auto;
-  }
-
-  .image-border-container {
-    border: 26px solid #ffe550; /* Бордер з кольором */
   }
 
   .image-border-container:hover,
@@ -222,8 +203,8 @@
     border: 26px solid #bbf330;
   }
 
-  .about-button-next,
-  .about-button-prev {
+  .hero-button-next,
+  .hero-button-prev {
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -235,25 +216,19 @@
     text-align: center;
   }
 
-  /* Наступна кнопка справа */
-  .about-button-next {
+  .hero-button-next {
     right: -10px;
     border-radius: 8px;
     background-color: #fefefe;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.06);
     padding: 4px;
-
-    /* Налаштуйте відповідно до дизайну */
   }
 
-  /* Попередня кнопка зліва */
-  .about-button-prev {
+  .hero-button-prev {
     left: -10px;
     border-radius: 8px;
     background-color: #fefefe;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.06);
     padding: 4px;
-
-    /* Налаштуйте відповідно до дизайну */
   }
 }

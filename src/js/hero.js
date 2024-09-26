@@ -18,8 +18,8 @@ const aboutSwiper = new Swiper('.swiper-container', {
     onlyInViewport: true,
   },
   navigation: {
-    nextEl: '.about-button-next',
-    prevEl: '.about-button-prev',
+    nextEl: '.hero-button-next',
+    prevEl: '.hero-button-prev',
   },
   breakpoints: {
     768: {

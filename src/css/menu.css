@@ -1,5 +1,4 @@
 .menu-food {
-  margin-top: 60px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,35 +7,29 @@
 }
 
 .container-menu {
+  padding: 60px 20px 60px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-bottom: 60px;
 }
 
 .menu-text-content {
   width: 280px;
   height: 118px;
-  margin-bottom: 60px;
 }
 
 .menu-title {
   text-align: center;
-  font-family: 'Roboto', sans-serif;
   font-weight: 700;
   font-size: 28px;
-  color: #2c2c2c;
   margin-bottom: 20px;
   letter-spacing: -0.5px;
 }
 
 .menu-text {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
   font-size: 14px;
   text-align: center;
-  color: #2c2c2c;
 }
 
 .menu-img-list {
@@ -57,6 +50,7 @@
     justify-content: center;
     align-items: center;
     background-color: #fefefe;
+    transition: border 300ms ease;
   }
 
   .image-border-container-mob:hover,
@@ -72,7 +66,15 @@
 
 @media only screen and (min-width: 768px) {
   .menu-food {
-    margin-top: 0;
+    margin-top: -30px;
+  }
+
+  .container-menu {
+    padding: 0 16px 60px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .image-border-container-menu {
@@ -85,6 +87,7 @@
     justify-content: center;
     align-items: center;
     background-color: #fefefe;
+    transition: border 300ms ease-in-out, transform 300ms ease-in-out;
   }
 
   .image-border-container-menu:hover,
@@ -94,12 +97,11 @@
   }
 
   .menu-img-list {
-    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 32px;
   }
 
   .menu-title {

@@ -9,7 +9,10 @@
 @import url('./base.css');
 @import url('./container.css');
 @import url('./header.css');
-@import url('./about.css'); /* Sections style */
+@import url('./hero.css'); /* Sections style */
 @import url('./service.css');
 @import url('./mobile-menu.css');
 @import url('./menu.css');
+@import url('./customers.css');
+@import url('./subscribe.css');
+@import url('./footer-food.css');

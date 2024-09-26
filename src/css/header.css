@@ -9,7 +9,7 @@
   align-items: center;
 }
 
-.header-logo-link {
+.container-header {
   padding-left: 20px;
 }
 
@@ -59,10 +59,6 @@
     margin-right: 30px;
   }
 
-  .header-order-nav {
-    display: block;
-  }
-
   .header-item-home {
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
@@ -70,7 +66,7 @@
     text-decoration: underline;
     text-decoration-skip-ink: none;
     color: #bbf330;
-    transition: color 250ms linear cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 300ms ease;
   }
 
   .header-item-home:hover,
@@ -84,6 +80,13 @@
     font-weight: 400;
     font-size: 14px;
     color: #000;
+    transition: color 300ms ease;
+  }
+
+  .header-item:hover,
+  .header-item:focus,
+  .header-item:active {
+    color: #bbf330;
   }
 
   .order-box {
@@ -92,6 +95,7 @@
     align-items: center;
   }
   .header-order-nav {
+    margin-right: 16px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -106,7 +110,7 @@
     line-height: 1.5;
     text-align: right;
     color: #2c2c2c;
-    transition: background-color 250ms linear cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 300ms ease;
   }
 
   .header-order-nav:hover,
@@ -118,7 +122,49 @@
 
 @media only screen and (min-width: 1280px) {
   .header-logo-link {
-    margin-right: 725px;
-    padding-left: 0;
+    margin-right: 700px;
+    padding-left: 16px;
+  }
+}
+
+/* ========== Back to top Button =========  */
+
+.back-to-top-btn {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffdf2a7e;
+  border-radius: 50%;
+  border: 1px solid #80ad0d;
+  position: fixed;
+  z-index: 1200;
+  bottom: -50px;
+  padding: 8px 8px;
+  right: 16px;
+  cursor: pointer;
+  transition: 0.3s all;
+  width: 40px;
+  height: 40px;
+}
+
+.back-to-top-btn svg {
+  fill: #80ad0d;
+}
+
+.back-to-top-btn.back-to-top-btn-active {
+  bottom: 30px;
+  transition: 0.3s all;
+}
+
+@media only screen and (min-width: 768px) {
+  .back-to-top-btn {
+    right: 32px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .back-to-top-btn {
+    right: 50px;
   }
 }
