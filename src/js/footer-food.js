@@ -1,16 +1,15 @@
 'use strict';
-
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
 // Отримання посилань на елементи DOM
 const refs = {
-  formElem: document.querySelector('.subscribe-form'),
-  inputMailElem: document.querySelector('.form-input-mail'),
-  spanValidElem: document.querySelector('.valid-notification'),
+  formElem: document.querySelector('.subscribe-footer-form'),
+  inputMailElem: document.querySelector('.footer-form-input-mail'),
+  spanValidElem: document.querySelector('.footer-valid-notification'),
   backDropElem: document.querySelector('.email-backdrop'),
   closeModalElem: document.querySelector('.modal-close-btn'),
-  submitBtnElem: document.querySelector('.form-submit-btn'),
+  submitBtnElem: document.querySelector('.footer-form-submit-btn'),
 };
 
 // Функція для збереження даних в LocalStorage

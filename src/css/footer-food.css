@@ -224,3 +224,20 @@
     margin-bottom: 0;
   }
 }
+
+.footer-valid-notification {
+  height: 18px;
+  font-size: 10px;
+  margin-left: 15px;
+  margin-bottom: 20px;
+}
+
+.footer-valid-notification.notif-error {
+  color: #e74a3b;
+}
+.footer-form-input-mail.input-success {
+  border: 1px solid #7eb101;
+}
+.footer-form-input-mail.input-error {
+  border: 1px solid #e74a3b;
+}

@@ -1,22 +1,40 @@
+'use strict';
+
+// Функція для блокування скролу
+function lockScroll() {
+  if (!document.body.classList.contains('scroll-locked')) {
+    document.body.classList.add('scroll-locked');
+  }
+}
+
+// Функція для розблокування скролу
+function unlockScroll() {
+  if (document.body.classList.contains('scroll-locked')) {
+    document.body.classList.remove('scroll-locked');
+  }
+}
+
+// Закриття мобільного меню
 document.getElementById('menu-close').addEventListener('click', function () {
   document.getElementById('mobile-menu').classList.remove('active');
   document.getElementById('mobile-menu-wrapper').classList.remove('active');
-  document.body.classList.remove('menu-open');
-
-  //   document.getElementById('menu-open').style.feel = 'green';
+  unlockScroll();
 });
 
+// Відкриття мобільного меню
 document.getElementById('menu-open').addEventListener('click', function () {
   document.getElementById('mobile-menu').classList.add('active');
   document.getElementById('mobile-menu-wrapper').classList.add('active');
-  document.body.classList.add('menu-open');
-
-  //   document.getElementById('menu-open').style.feel = 'yellow';
+  lockScroll();
 });
+
+// Робота з пунктами меню
 const menuItems = document.querySelectorAll('.menu-item');
 
 menuItems.forEach(item => {
-  item.addEventListener('click', function () {
+  item.addEventListener('click', function (event) {
+    event.preventDefault(); // Забороняємо стандартний перехід
+
     // Видалити клас active з усіх пунктів меню
     menuItems.forEach(i => i.classList.remove('active'));
 
@@ -26,13 +44,15 @@ menuItems.forEach(item => {
     // Закрити меню
     document.getElementById('mobile-menu').classList.remove('active');
     document.getElementById('mobile-menu-wrapper').classList.remove('active');
-    document.body.classList.remove('menu-open');
+    unlockScroll(); // Розблокуємо скрол
 
     // Переходити за посиланням після кліку
     const link = this.querySelector('a'); // Знайти посилання всередині пункту меню
     if (link) {
       const href = link.getAttribute('href'); // Отримати посилання
-      window.location.href = href; // Виконати перехід
+      setTimeout(() => {
+        window.location.href = href; // Виконати перехід після затримки
+      }, 300); // Додати затримку для плавного закриття меню
     }
   });
 });

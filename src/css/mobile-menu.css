@@ -6,6 +6,7 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5); /* Темний фон */
   display: none;
+  z-index: 1200;
 }
 .mobile-menu-close {
   position: absolute;
@@ -28,13 +29,27 @@
   min-height: 255px;
   top: 50px;
   left: 165px;
-  transform: translateX(130%);
+  transform: translateX(150%);
   transition: transform 0.5s ease;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+@media only screen and (min-width: 375px) and (max-width: 767px) {
+  .mobile-menu {
+    position: fixed;
+    min-width: 130px;
+    min-height: 255px;
+    top: 50px;
+    left: 220px;
+    transform: translateX(150%);
+    transition: transform 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .mobile-menu.active {
   transform: translateX(0);
 }

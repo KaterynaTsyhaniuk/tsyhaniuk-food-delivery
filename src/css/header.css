@@ -134,7 +134,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #ffdf2a7e;
+  background-color: #ebebe97e;
   border-radius: 50%;
   border: 1px solid #80ad0d;
   position: fixed;
@@ -149,7 +149,7 @@
 }
 
 .back-to-top-btn svg {
-  fill: #80ad0d;
+  fill: #ffe450;
 }
 
 .back-to-top-btn.back-to-top-btn-active {
@@ -166,5 +166,11 @@
 @media screen and (min-width: 1280px) {
   .back-to-top-btn {
     right: 50px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .back-to-top-btn {
+    right: 30px;
   }
 }
