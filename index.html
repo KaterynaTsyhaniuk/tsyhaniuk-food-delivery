@@ -15,7 +15,7 @@
   <script type="module" crossorigin src="/tsyhaniuk-food-delivery/index.js"></script>
   <link rel="modulepreload" crossorigin href="/tsyhaniuk-food-delivery/assets/vendor-DnziCEbb.js">
   <link rel="stylesheet" crossorigin href="/tsyhaniuk-food-delivery/assets/vendor-CTkdz8MY.css">
-  <link rel="stylesheet" crossorigin href="/tsyhaniuk-food-delivery/assets/index-15ZFJg6u.css">
+  <link rel="stylesheet" crossorigin href="/tsyhaniuk-food-delivery/assets/index-C-Zt8lrx.css">
 </head>
 
 <body>
@@ -29,7 +29,7 @@
 
                 <button type="button" id="menu-open" class="burger-button" aria-label="Open menu navigation">
                     <svg class="burger-button-svg" width="28" height="28">
-                        <use href="/tsyhaniuk-food-delivery/assets/icon-BWgpjrCM.svg#icon-burger-menu"></use>
+                        <use href="/tsyhaniuk-food-delivery/assets/icon-D1vBaJyv.svg#icon-burger-menu"></use>
                     </svg>
                 </button>
 
@@ -42,7 +42,7 @@
 
                 </ul>
 
-                <a href="" class="header-order-nav">Order Now</a>
+                <button type="button" class="header-order-now order-now-js">Order Now</button>
 
             </div>
 
@@ -70,13 +70,13 @@
             <p class="hero-text">With just a few clicks, you can have your favorite meals delivered straight to your
                 doorstep, no matter where you are.
                 Order now and enjoy a hassle-free and delicious meal from the comfort of your own home.</p>
-            <a href="" class="hero-order-nav">Order Now</a>
+            <button type="button" class="header-order-now order-now-js">Order Now</button>
 
         </div>
 
         <div class="projects-wrapper-image">
-            <div class="image-border-container">
-                <div class="swiper-container">
+            <div class="image-border-container border-up">
+                <div class="swiper-container swiper-up">
                     <ul class="swiper-wrapper">
                         <li class="swiper-slide">
                             <picture>
@@ -113,12 +113,12 @@
                         </li>
                     </ul>
 
-                    <svg class="hero-button-prev" width="39" height="31">
+                    <svg class="hero-button-prev button-up-left" width="39" height="31">
                         <use href="/tsyhaniuk-food-delivery/assets/next-prev-xxfTO8fd.svg#icon-Vector-prev"></use>
                     </svg>
 
 
-                    <svg class="hero-button-next" width="39" height="31">
+                    <svg class="hero-button-next button-up-right" width="39" height="31">
                         <use href="/tsyhaniuk-food-delivery/assets/next-prev-xxfTO8fd.svg#icon-Vector-next"></use>
                     </svg>
 
@@ -177,7 +177,7 @@
                 <div class="first-icon-box">
                     <div class="service-svg">
                         <svg width="32" height="32">
-                            <use href="/tsyhaniuk-food-delivery/assets/icon-BWgpjrCM.svg#icon-rocket"></use>
+                            <use href="/tsyhaniuk-food-delivery/assets/icon-D1vBaJyv.svg#icon-rocket"></use>
                         </svg>
                     </div>
                     <h3 class="service-icon-title">Fasest Delivery</h3>
@@ -188,7 +188,7 @@
                 <div class="second-icon-box">
                     <div class="service-svg">
                         <svg width="32" height="32">
-                            <use href="/tsyhaniuk-food-delivery/assets/icon-BWgpjrCM.svg#icon-touch"></use>
+                            <use href="/tsyhaniuk-food-delivery/assets/icon-D1vBaJyv.svg#icon-touch"></use>
                         </svg>
                     </div>
                     <h3 class="service-icon-title">Easy To Order</h3>
@@ -199,13 +199,13 @@
 
             </div>
             <div class="service-links">
-                <div class="service-order-nav">
-                    <a href="">Order Now</a>
-                </div>
+
+                <button class="service-order-nav order-now-js">Order Now</button>
+
                 <div class="service-read-more">
                     <a href="#menu">Read more</a>
                     <svg width="15" height="14">
-                        <use href="/tsyhaniuk-food-delivery/assets/icon-BWgpjrCM.svg#icon-arrow-right"></use>
+                        <use href="/tsyhaniuk-food-delivery/assets/icon-D1vBaJyv.svg#icon-arrow-right"></use>
                     </svg>
                 </div>
             </div>
@@ -318,7 +318,7 @@
     <div class="menu-modal-content">
         <button type="button" class="menu-modal-close">
             <svg width="24" height="24">
-                <use href="/tsyhaniuk-food-delivery/assets/icon-BWgpjrCM.svg#icon-close-btn"></use>
+                <use href="/tsyhaniuk-food-delivery/assets/icon-D1vBaJyv.svg#icon-close-btn"></use>
             </svg>
         </button>
 
@@ -425,7 +425,7 @@
         <div class="email-modal">
             <button type="button" class="modal-close-btn" aria-label="close-btn">
                 <svg class="modal-close-icon" width="20" hight="20">
-                    <use href="/tsyhaniuk-food-delivery/assets/icon-BWgpjrCM.svg#icon-close-btn"></use>
+                    <use href="/tsyhaniuk-food-delivery/assets/icon-D1vBaJyv.svg#icon-close-btn"></use>
                 </svg>
             </button>
             <div class="modal-content-box">
@@ -446,7 +446,7 @@
                 </a>
 
                 <ul class="footer-list">
-                    <li class="footer-item-home"><a href="./index.html">Home</a></li>
+                    <li class="footer-item"><a href="./index.html">Home</a></li>
                     <li class="footer-item"><a href="#about">About</a></li>
                     <li class="footer-item"><a href="#customer">Reviews</a></li>
                     <li class="footer-item"><a href="#menu">Menu</a></li>
@@ -455,22 +455,29 @@
                 </ul>
             </div>
 
-            <form class="subscribe-footer-form" novalidate>
+            <div class="footer-content-box">
                 <h3 class="title-form-footer">Subscribe</h3>
-                <div class="footer-input-form-box">
-                    <input autocomplete="off" type="email" name="email" id="email" placeholder="Enter your email"
-                        pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" required class="footer-form-input-mail"
-                        aria-label="Your email" />
-                    <datalist id="email-list"></datalist>
-                    <span class="footer-valid-notification"></span>
+                <form class="subscribe-footer-form" novalidate>
 
+                    <div class="footer-input-form-box">
+
+                        <input autocomplete="off" type="email" name="email" id="email" placeholder="Enter your email"
+                            pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" required class="footer-form-input-mail"
+                            aria-label="Your email" />
+                        <datalist id="email-list"></datalist>
+                        <span class="footer-valid-notification"></span>
+
+
+
+                    </div>
                     <button type="submit" class="footer-form-submit-btn" aria-label="submit">
                         Subscribe
                     </button>
-                </div>
-                <p class="first-footer-text">By subscribing you agree to with our <span class="footer-link">Privacy
-                        Policy</span></p>
-            </form>
+                </form>
+                <label class="first-footer-text">By subscribing you agree to with our <a class="footer-link"
+                        href="#">Privacy
+                        Policy</a></label>
+            </div>
         </div>
 
 
@@ -495,7 +502,7 @@
         <div class="mobile-menu-container">
             <button class="mobile-menu-close" id="menu-close" type="button" aria-label="Close menu">
                 <svg width="24" height="24">
-                    <use href="/tsyhaniuk-food-delivery/assets/icon-BWgpjrCM.svg#icon-close-btn"></use>
+                    <use href="/tsyhaniuk-food-delivery/assets/icon-D1vBaJyv.svg#icon-close-btn"></use>
                 </svg>
             </button>
             <div class="mobile-menu-content">
@@ -514,6 +521,43 @@
         </div>
     </div>
 </div>
+  <div class="backdrop-order-now  is-hidden" aria-hidden="true">
+    <div class="modal-order-now">
+        <button class="modal-order-close-btn" type="button">
+            <svg class="modal-order-svg-close" width="24" height="24" aria-label="close-icon">
+                <use href="/tsyhaniuk-food-delivery/assets/icon-D1vBaJyv.svg#icon-close-btn"></use>
+            </svg>
+        </button>
+        <p class="main-text-order">Order Form</p>
+        <form class="order-form">
+            <div class="order-form-wrapper">
+                <label for="user-name" class="label-text">Name</label>
+                <input type="text" class="order-input-form order-input-text" placeholder="Your name" name="user-name"
+                    id="user-name" required pattern="[a-zA-Zа-яА-ЯіІїЇєЄ']+">
+                <datalist id="email-list"></datalist>
+                <span class="order-valid-notification-text"></span>
+            </div>
+            <div class="order-form-wrapper">
+                <label for="user-phone" class="label-text">Phone number</label>
+                <input type="tel" class="order-input-form order-input-tel" placeholder="+38(0_ _) _ _ _   _ _   _ _"
+                    name="user-phone" id="user-phone" required pattern="^\+380\d{9}$">
+                <datalist id="email-list"></datalist>
+                <span class="order-valid-notification-tel"></span>
+            </div>
+            <div class="order-form-wrapper">
+                <label for="user-email" class="label-text">E-mail</label>
+                <input type="email" class="order-input-form order-input-email" placeholder="example@gmail.com"
+                    name="user-email" id="user-email" required pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$">
+                <datalist id="email-list"></datalist>
+                <span class="order-valid-notification-email"></span>
+            </div>
+            <button type="submit" class="form-order-btn">Send</button>
+
+
+        </form>
+    </div>
+</div>
+
 
 </body>
 
