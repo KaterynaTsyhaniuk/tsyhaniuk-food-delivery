@@ -5,7 +5,8 @@
   margin: 0 auto;
 }
 
-.hero-order-nav {
+.hero-order-now {
+  margin-right: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,10 +15,14 @@
   width: 98px;
   height: 32px;
   background-color: #bbf330;
+  font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 13px;
+  line-height: 1.5;
   text-align: right;
+  color: #2c2c2c;
   transition: background-color 300ms ease;
+  border: transparent;
 }
 
 .hero-order-nav:hover,
