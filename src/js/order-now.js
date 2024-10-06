@@ -94,15 +94,13 @@ refs.formOrderElem.addEventListener('submit', async e => {
   try {
     // Відправка даних через Axios
     await sendFormData({ userData });
-    const svgPath = window.location.origin + './img/star.svg';
     iziToast.success({
       timeout: 5000,
       title: '',
-      message: `<div class="custom-icon-container"><svg class="back-to-top-btn-icon" width="20" height="20"><use href="${svgPath}#icon-star"></use></svg></div>Thank you for choosing us!`,
+      message: 'Thank you for choosing us!',
       position: 'bottomCenter',
       messageColor: '#000',
       backgroundColor: '#bbf330',
-      icon: 'none',
     });
   } catch (error) {
     iziToast.error(iziToastErrorObj); // Виведення помилки за допомогою iziToast
