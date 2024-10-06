@@ -1,0 +1,153 @@
+.backdrop-order-now {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(94, 99, 99, 0.7);
+  z-index: 1300;
+  /* display: none; */
+}
+
+.modal-order-now {
+  padding: 32px 20px 32px 20px;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  border-radius: 30px;
+  width: 320px;
+  min-height: 449px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.06);
+  background: #ffe550;
+}
+
+.modal-order-close-btn {
+  position: absolute;
+  padding: 0;
+  right: 16px;
+  top: 16px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.main-text-order {
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.order-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.order-form-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.label-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.4;
+  margin-bottom: 2px;
+}
+
+.order-input-form {
+  border: 1px solid #7eb101;
+  border-radius: 30px;
+  width: 280px;
+  height: 48px;
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+  background: #fff;
+  padding-left: 12px;
+  outline: transparent;
+}
+
+.form-order-btn {
+  margin-left: 87px;
+  border: 2px solid #7eb101;
+  border-radius: 30px;
+  padding: 10px 20px;
+  width: 106px;
+  height: 40px;
+  background: #fff;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+@media only screen and (min-width: 768px) {
+  .modal-order-now {
+    padding: 32px;
+    width: 458px;
+    min-height: 449px;
+  }
+
+  .order-input-form {
+    width: 394px;
+    height: 48px;
+  }
+
+  .form-order-btn {
+    margin-left: 156px;
+  }
+}
+
+.order-valid-notification-text,
+.order-valid-notification-tel,
+.order-valid-notification-email {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.4;
+  min-height: 20px; /* Або інша відповідна висота для спанів */
+  display: block;
+}
+
+.order-valid-notification-text.notif-error,
+.order-valid-notification-tel.notif-error,
+.order-valid-notification-email.notif-error {
+  color: #e74a3b;
+}
+.order-input-text.input-success,
+.order-input-tel.input-success,
+.order-input-email.input-success {
+  border: 1px solid #7eb101;
+}
+.order-input-text.input-error,
+.order-input-tel.input-error,
+.order-input-email.input-error {
+  border: 1px solid #e74a3b;
+}
+
+.custom-icon-container {
+  display: inline-flex;
+  margin-right: 15px;
+  padding: 2px;
+  border: 2px solid #7eb101;
+  border-radius: 50%;
+  background-color: #fafafa;
+}
+
+.custom-icon-container svg {
+  fill: #ffe550; /* Колір бекграунду іконки */
+}
+
+.form-order-btn.input-success {
+  background-color: #bbf330; /* Змінити на бажаний колір фону */
+}

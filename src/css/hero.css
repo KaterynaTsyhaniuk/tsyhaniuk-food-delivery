@@ -89,7 +89,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 10;
+    z-index: 11;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -97,7 +97,7 @@
   }
 
   .hero-button-next {
-    right: -12px;
+    right: -20px;
     border-radius: 4px;
     background-color: #fefefe;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.06);
@@ -105,7 +105,7 @@
   }
 
   .hero-button-prev {
-    left: -12px;
+    left: -20px;
     border-radius: 4px;
     background-color: #fefefe;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.06);
@@ -156,6 +156,37 @@
     font-size: 16px;
     line-height: 1.5;
     margin-bottom: 40px;
+  }
+
+  .border-up {
+    z-index: 9;
+    position: relative;
+    opacity: 0;
+    transition: opacity 6s ease-out;
+  }
+  .border-up.hero-border-visible,
+  .swiper-up.hero-swiper-visible,
+  .button-up-right.hero-button-right-visible,
+  .button-up-left.hero-button-left-visible {
+    opacity: 1;
+  }
+
+  .swiper-up {
+    opacity: 0;
+    transition: opacity 8s ease-out;
+    transition-delay: 1000ms;
+  }
+
+  .button-up-left {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+    transition-delay: 1500ms;
+  }
+
+  .button-up-right {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+    transition-delay: 1500ms;
   }
 }
 
@@ -209,7 +240,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 10;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -217,7 +248,7 @@
   }
 
   .hero-button-next {
-    right: -10px;
+    right: -30px;
     border-radius: 8px;
     background-color: #fefefe;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.06);
@@ -225,7 +256,7 @@
   }
 
   .hero-button-prev {
-    left: -10px;
+    left: -30px;
     border-radius: 8px;
     background-color: #fefefe;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.06);

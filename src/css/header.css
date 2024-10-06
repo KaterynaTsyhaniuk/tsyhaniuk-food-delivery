@@ -13,21 +13,21 @@
   padding-left: 20px;
 }
 
-.header-order-nav {
+.header-order-now {
   display: none;
 }
 
 .burger-button {
+  fill: #80ad0d;
   background-color: transparent;
   border: none;
-  color: #7eb101;
   transition: color 250ms linear cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .burger-button:active,
 .burger-button:hover,
 .burger-button:focus {
-  color: #ffe450;
+  fill: #ffe450;
 }
 
 @media only screen and (max-width: 767px) {
@@ -94,7 +94,7 @@
     text-align: center;
     align-items: center;
   }
-  .header-order-nav {
+  .header-order-now {
     margin-right: 16px;
     display: flex;
     justify-content: center;
@@ -111,11 +111,12 @@
     text-align: right;
     color: #2c2c2c;
     transition: background-color 300ms ease;
+    border: transparent;
   }
 
-  .header-order-nav:hover,
-  .header-order-nav:focus,
-  .header-order-nav:active {
+  .header-order-now:hover,
+  .header-order-now:focus,
+  .header-order-now:active {
     background-color: #ffe450;
   }
 }

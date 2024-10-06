@@ -1,4 +1,6 @@
 'use strict';
+
+import axios from 'axios';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
@@ -12,6 +14,46 @@ const refs = {
   submitBtnElem: document.querySelector('.footer-form-submit-btn'),
 };
 
+const STORAGE_KEY = 'email'; // Визначаємо ключ для зберігання email
+
+// Збереження даних при кожному вводі
+refs.formElem.addEventListener('input', () => {
+  const formData = new FormData(refs.formElem);
+  const email = formData.get('email').trim();
+  checkInputValidity();
+  saveToLS(STORAGE_KEY, email);
+});
+
+// Завантаження даних з LocalStorage при завантаженні сторінки
+window.addEventListener('DOMContentLoaded', () => {
+  const email = loadFromLS(STORAGE_KEY);
+
+  if (email && refs.formElem.elements.email) {
+    refs.formElem.elements.email.value = email;
+    checkInputValidity();
+  }
+});
+
+// Обробка сабміту форми
+refs.formElem.addEventListener('submit', async e => {
+  e.preventDefault();
+
+  const formData = new FormData(refs.formElem);
+  const email = formData.get('email');
+
+  localStorage.removeItem(STORAGE_KEY); // Видаляємо дані з LocalStorage після сабміту
+  refs.formElem.reset(); // Очищаємо форму
+
+  try {
+    // Відправка даних через Axios
+    await sendFormData({ email });
+    showModal(); // Показ модального вікна при успішній відправці
+    clearNotifField();
+  } catch (error) {
+    iziToast.error(iziToastErrorObj); // Виведення помилки за допомогою iziToast
+  }
+});
+
 // Функція для збереження даних в LocalStorage
 function saveToLS(key, value) {
   localStorage.setItem(key, JSON.stringify(value));
@@ -19,42 +61,28 @@ function saveToLS(key, value) {
 
 // Функція для завантаження даних з LocalStorage
 function loadFromLS(key) {
-  const data = localStorage.getItem(key);
-  return data ? JSON.parse(data) : '';
+  const json = localStorage.getItem(key);
+  try {
+    return JSON.parse(json);
+  } catch {
+    return null;
+  }
 }
 
-// Виконання коду після завантаження DOM
-window.addEventListener('DOMContentLoaded', () => {
-  const email = loadFromLS('email');
-
-  // Перевіряємо, чи існує поле вводу для email
-  if (refs.inputMailElem && email) {
-    refs.inputMailElem.value = email;
-  }
-});
-
-// Перевірка валідності email при вводі
-refs.formElem?.addEventListener('input', () => {
-  checkInputValidity();
-});
-
+// Перевірка валідності введеного email
 function checkInputValidity() {
-  // Перевіряємо наявність поля вводу email
   if (!refs.inputMailElem) {
     console.error('Email input element not found');
     return;
   }
 
-  const email = refs.inputMailElem.value.trim();
   const isValid = refs.inputMailElem.validity.valid;
 
   if (!isValid) {
-    refs.submitBtnElem?.setAttribute('disabled', ''); // Забороняємо відправлення форми
-    createErrorMailNotif(); // Створюємо повідомлення про помилку
+    refs.submitBtnElem?.setAttribute('disabled', '');
+    createErrorMailNotif();
   } else {
-    if (refs.spanValidElem) {
-      refs.spanValidElem.textContent = 'Success!';
-    }
+    refs.spanValidElem.textContent = 'Success!';
     refs.inputMailElem.classList.remove('input-error');
     refs.spanValidElem?.classList.remove('notif-error');
     refs.inputMailElem.classList.add('input-success');
@@ -62,52 +90,28 @@ function checkInputValidity() {
   }
 }
 
-// Повідомлення про помилку email
 function createErrorMailNotif() {
   refs.inputMailElem?.classList.add('input-error');
   refs.spanValidElem?.classList.add('notif-error');
-  if (refs.spanValidElem) {
-    refs.spanValidElem.textContent = 'Try again! (example@email.com)';
+  refs.spanValidElem.textContent = 'Try again! (example@email.com)';
+}
+
+// Функція для надсилання форми через Axios
+async function sendFormData(data) {
+  try {
+    const response = await axios.post(
+      'https://jsonplaceholder.typicode.com/posts',
+      data
+    );
+    console.log('Form successfully submitted:', response.data);
+  } catch (error) {
+    throw new Error('Failed to send form data');
   }
 }
 
-// Обробка події надсилання форми
-refs.formElem?.addEventListener('submit', async event => {
-  event.preventDefault(); // Забороняємо стандартну поведінку форми
-
-  if (!refs.inputMailElem) {
-    console.error('Email input element not found');
-    return;
-  }
-
-  const email = refs.inputMailElem.value.trim();
-
-  if (!refs.inputMailElem.validity.valid) {
-    createErrorMailNotif(); // Створюємо помилку, якщо email невалідний
-    return;
-  }
-
-  // Збереження email в LocalStorage
-  saveToLS('email', email);
-
-  // Очищення поля повідомлення
-  clearNotifField();
-
-  // Спроба надсилання даних і показ модального вікна
-  try {
-    await sendFormData({ email }); // Імітація запиту
-    showModal();
-    refs.formElem.reset(); // Очищуємо форму після успішної відправки
-  } catch (error) {
-    iziToast.error(iziToastErrorObj); // Виведення помилки за допомогою iziToast
-  }
-});
-
 // Очищення повідомлень про валідність
 function clearNotifField() {
-  if (refs.spanValidElem) {
-    refs.spanValidElem.textContent = '';
-  }
+  refs.spanValidElem.textContent = '';
   refs.inputMailElem?.classList.remove('input-success');
   refs.spanValidElem?.classList.remove('notif-error');
 }
@@ -116,38 +120,26 @@ function clearNotifField() {
 function showModal() {
   if (refs.backDropElem) {
     refs.backDropElem.classList.remove('is-hidden');
-    document.body.style.overflow = 'hidden'; // Забороняємо прокручування сторінки
+    document.body.style.overflow = 'hidden';
   }
 }
 
-// Закриття модального вікна при натисканні на кнопку закриття
+// Закриття модального вікна
 refs.closeModalElem?.addEventListener('click', () => {
   if (refs.backDropElem) {
     refs.backDropElem.classList.add('is-hidden');
-    document.body.style.overflow = 'auto'; // Відновлюємо прокручування сторінки
+    document.body.style.overflow = 'auto';
   }
 });
 
-// Закриття модального вікна при натисканні на бекдроп
 refs.backDropElem?.addEventListener('click', event => {
   if (event.target === refs.backDropElem) {
     refs.backDropElem.classList.add('is-hidden');
-    document.body.style.overflow = 'auto'; // Відновлюємо прокручування сторінки
+    document.body.style.overflow = 'auto';
   }
 });
 
-// Імітація надсилання форми (сурогатний запит)
-async function sendFormData(data) {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      const success = true; // Тут можна зробити логіку успіху або помилки
-      if (success) resolve();
-      else reject(new Error('Failed to send form'));
-    }, 1000); // Затримка 1 секунда для імітації запиту
-  });
-}
-
-// Об'єкт iziToast для повідомлення про помилку
+// iziToast для повідомлення про помилку
 const iziToastErrorObj = {
   title: 'Error',
   message: 'Sorry, something went wrong...',

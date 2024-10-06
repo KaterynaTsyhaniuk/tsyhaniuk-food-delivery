@@ -1,5 +1,4 @@
 'use strict';
-'use strict';
 
 import axios from 'axios';
 import iziToast from 'izitoast';
@@ -21,7 +20,7 @@ const STORAGE_KEY = 'email'; // Визначаємо ключ для збері�
 refs.formElem.addEventListener('input', () => {
   const formData = new FormData(refs.formElem);
   const email = formData.get('email').trim();
-
+  checkInputValidity();
   saveToLS(STORAGE_KEY, email);
 });
 

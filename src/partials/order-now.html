@@ -1,0 +1,36 @@
+<div class="backdrop-order-now  is-hidden" aria-hidden="true">
+    <div class="modal-order-now">
+        <button class="modal-order-close-btn" type="button">
+            <svg class="modal-order-svg-close" width="24" height="24" aria-label="close-icon">
+                <use href="./img/icon.svg#icon-close-btn"></use>
+            </svg>
+        </button>
+        <p class="main-text-order">Order Form</p>
+        <form class="order-form">
+            <div class="order-form-wrapper">
+                <label for="user-name" class="label-text">Name</label>
+                <input type="text" class="order-input-form order-input-text" placeholder="Your name" name="user-name"
+                    id="user-name" required pattern="[a-zA-Zа-яА-ЯіІїЇєЄ']+">
+                <datalist id="email-list"></datalist>
+                <span class="order-valid-notification-text"></span>
+            </div>
+            <div class="order-form-wrapper">
+                <label for="user-phone" class="label-text">Phone number</label>
+                <input type="tel" class="order-input-form order-input-tel" placeholder="+38(0_ _) _ _ _   _ _   _ _"
+                    name="user-phone" id="user-phone" required pattern="^\+380\d{9}$">
+                <datalist id="email-list"></datalist>
+                <span class="order-valid-notification-tel"></span>
+            </div>
+            <div class="order-form-wrapper">
+                <label for="user-email" class="label-text">E-mail</label>
+                <input type="email" class="order-input-form order-input-email" placeholder="example@gmail.com"
+                    name="user-email" id="user-email" required pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$">
+                <datalist id="email-list"></datalist>
+                <span class="order-valid-notification-email"></span>
+            </div>
+            <button type="submit" class="form-order-btn">Send</button>
+
+
+        </form>
+    </div>
+</div>

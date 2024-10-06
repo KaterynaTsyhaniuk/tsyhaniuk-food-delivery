@@ -30,3 +30,14 @@ const aboutSwiper = new Swiper('.swiper-container', {
     },
   },
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const upBorderElem = document.querySelector('.border-up');
+  const upSwiperElem = document.querySelector('.swiper-up');
+  const upButtonLeftElem = document.querySelector('.button-up-left');
+  const upButtonRightElem = document.querySelector('.button-up-right');
+  upBorderElem.classList.add('hero-border-visible');
+  upSwiperElem.classList.add('hero-swiper-visible');
+  upButtonLeftElem.classList.add('hero-button-left-visible');
+  upButtonRightElem.classList.add('hero-button-right-visible');
+});

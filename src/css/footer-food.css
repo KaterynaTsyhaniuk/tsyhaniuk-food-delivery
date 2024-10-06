@@ -38,10 +38,16 @@
   gap: 20px;
   width: 50px;
   min-height: 160px;
+  margin-bottom: 40px;
+}
+
+.footer-item {
   font-weight: 400;
   font-size: 14px;
   color: #000;
-  margin-bottom: 40px;
+}
+.footer-item:hover {
+  color: #7eb101;
 }
 
 .title-form-footer {
@@ -65,6 +71,7 @@
   background: #fff;
   font-size: 12px;
   outline: none;
+  margin-bottom: 20px;
 }
 
 .footer-form-submit-btn {
@@ -95,6 +102,7 @@
 }
 
 .footer-link {
+  cursor: pointer;
   font-size: 10px;
   text-decoration: underline;
   text-decoration-skip-ink: none;
@@ -153,10 +161,9 @@
 
   .footer-input-form-box {
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    align-items: start;
     text-align: center;
-    margin-bottom: 12px;
   }
 
   .footer-form-submit-btn {
@@ -190,6 +197,16 @@
     align-items: center;
     font-size: 12px;
   }
+
+  .subscribe-footer-form {
+    display: flex;
+    flex-direction: row;
+    gap: 13px;
+  }
+
+  .footer-form-input-mail {
+    margin-bottom: 4px;
+  }
 }
 
 @media only screen and (min-width: 1280px) {
@@ -216,7 +233,12 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 80px;
+    margin-bottom: 70px;
+  }
+
+  .input-box {
+    flex-direction: column;
+    align-items: start;
   }
 
   .first-footer-text {
@@ -228,8 +250,6 @@
 .footer-valid-notification {
   height: 18px;
   font-size: 10px;
-  margin-left: 15px;
-  margin-bottom: 20px;
 }
 
 .footer-valid-notification.notif-error {
