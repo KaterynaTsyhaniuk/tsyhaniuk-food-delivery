@@ -94,7 +94,7 @@ refs.formOrderElem.addEventListener('submit', async e => {
   try {
     // Відправка даних через Axios
     await sendFormData({ userData });
-    const svgPath = window.location.origin + '/img/star.svg';
+    const svgPath = window.location.origin + './img/star.svg';
     iziToast.success({
       timeout: 5000,
       title: '',
