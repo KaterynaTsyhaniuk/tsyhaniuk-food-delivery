@@ -1,6 +1,6 @@
 .customer-container {
   padding: 60px 20px 60px 20px;
-  background-image: url(../img/customer/rectangle-701-min.png);
+  background-image: url(../img/footer-food/fruit-footer-mob-min.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -11,7 +11,7 @@
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
   .customer-container {
-    background-image: url(../img/customer/rectangle-701@2x-min.png);
+    background-image: url(../img/footer-food/fruit-footer-mob@2x-min.png);
   }
 }
 
