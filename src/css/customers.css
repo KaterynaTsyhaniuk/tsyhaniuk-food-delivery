@@ -3,8 +3,8 @@
   width: 320px;
   min-height: 769px;
   background-image: url(../img/customer/customer-m-back-min.png);
-  background-position: center; /* Вирівнює зображення по центру контейнера */
-  background-repeat: no-repeat; /* Вимикає повторення зображення */
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom center;
 }
@@ -31,7 +31,6 @@
 .customer-list {
   display: flex;
   flex-direction: column;
-
   gap: 24px;
 }
 

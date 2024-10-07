@@ -1,8 +1,8 @@
-service-container {
+.service-container {
   padding: 41px 20px 60px 20px;
   background-image: url(../img/service-background/Rectangle\ 694-min.png);
-  background-position: center; /* Вирівнює зображення по центру контейнера */
-  background-repeat: no-repeat; /* Вимикає повторення зображення */
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
 }
@@ -85,7 +85,7 @@ service-container {
 .service-read-more {
   font-size: 13px;
   color: #000;
-  cursor: poiabout;
+  cursor: pointer;
 }
 .service-links {
   display: flex;
@@ -97,7 +97,6 @@ service-container {
   width: 15px;
   height: 14px;
   vertical-align: middle;
-  /* Якщо потрібно трохи підняти або опустити іконку */
   transform: translateY(-1px);
 }
 
@@ -106,8 +105,8 @@ service-container {
     padding: 100px 32px 88px 32px;
     background-image: url(../img/service-background/Rectangle-tab718-min.png);
 
-    background-position: center; /* Вирівнює зображення по центру контейнера */
-    background-repeat: no-repeat; /* Вимикає повторення зображення */
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
     transform: translateY(-100px);
@@ -171,8 +170,8 @@ service-container {
     height: 824px;
     padding: 40px 18px 43px 18px;
     background-image: url(../img/service-background/Rectangle-desctop694-min.png);
-    background-position: center; /* Вирівнює зображення по центру контейнера */
-    background-repeat: no-repeat; /* Вимикає повторення зображення */
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
     transform: translateY(-150px);

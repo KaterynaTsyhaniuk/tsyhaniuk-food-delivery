@@ -6,7 +6,6 @@
   height: 100%;
   background: rgba(94, 99, 99, 0.7);
   z-index: 1300;
-  /* display: none; */
 }
 
 .modal-order-now {
@@ -115,7 +114,7 @@
   font-weight: 500;
   font-size: 13px;
   line-height: 1.4;
-  min-height: 20px; /* Або інша відповідна висота для спанів */
+  min-height: 20px;
   display: block;
 }
 
@@ -145,9 +144,9 @@
 }
 
 .custom-icon-container svg {
-  fill: #ffe550; /* Колір бекграунду іконки */
+  fill: #ffe550;
 }
 
 .form-order-btn.input-success {
-  background-color: #bbf330; /* Змінити на бажаний колір фону */
+  background-color: #bbf330;
 }

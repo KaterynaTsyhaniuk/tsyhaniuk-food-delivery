@@ -5,8 +5,8 @@
   width: 320px;
   height: 619px;
   background-image: url(../img/footer-food/fruit-footer-mob-min.png);
-  background-position: center; /* Вирівнює зображення по центру контейнера */
-  background-repeat: no-repeat; /* Вимикає повторення зображення */
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
 }
 
@@ -129,8 +129,8 @@
     box-shadow: 0 -4px 24px 0 rgba(105, 105, 105, 0.1);
     background: #fefefe;
     background-image: url(../img/footer-food/fruit-footer-tab-min.png);
-    background-position: center; /* Вирівнює зображення по центру контейнера */
-    background-repeat: no-repeat; /* Вимикає повторення зображення */
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
   }
 
@@ -217,8 +217,8 @@
     box-shadow: 0 -4px 24px 0 rgba(105, 105, 105, 0.1);
     background: #fefefe;
     background-image: url(../img/footer-food/fruit-footer-backdrop-min.png);
-    background-position: bottom; /* Вирівнює зображення по центру контейнера */
-    background-repeat: no-repeat; /* Вимикає повторення зображення */
+    background-position: bottom;
+    background-repeat: no-repeat;
   }
 
   @media (min-device-pixel-ratio: 2),

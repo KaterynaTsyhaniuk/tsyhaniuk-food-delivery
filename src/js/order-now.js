@@ -16,8 +16,6 @@ const refs = {
   spanValidEmail: document.querySelector('.order-valid-notification-email'),
 };
 
-// Логіка для відкриття/закриття модального вікна
-
 document.addEventListener('DOMContentLoaded', () => {
   refs.openModalOrderNowBtns.forEach(button => {
     button.addEventListener('click', () => {
@@ -47,12 +45,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// Функція для збереження даних в LocalStorage
 function saveToLS(key, value) {
   localStorage.setItem(key, JSON.stringify(value));
 }
 
-// Функція для завантаження даних з LocalStorage
 function loadFromLS(key) {
   const json = localStorage.getItem(key);
   try {
@@ -73,7 +69,6 @@ refs.formOrderElem.addEventListener('input', () => {
   saveToLS('orderFormData', userData);
 });
 
-// Обробка сабміту форми
 refs.formOrderElem.addEventListener('submit', async e => {
   e.preventDefault();
 
@@ -84,15 +79,14 @@ refs.formOrderElem.addEventListener('submit', async e => {
     email: formData.get('user-email'),
   };
 
-  localStorage.removeItem('orderFormData'); // Видаляємо дані з LocalStorage після сабміту
-  refs.formOrderElem.reset(); // Очищаємо форму
+  localStorage.removeItem('orderFormData');
+  refs.formOrderElem.reset();
   clearOrderValidTextSpan();
   clearOrderValidTelSpan();
   clearOrderValidEmailSpan();
   refs.submitOrderButton.classList.remove('input-success');
 
   try {
-    // Відправка даних через Axios
     await sendFormData({ userData });
     iziToast.success({
       timeout: 5000,
@@ -103,11 +97,10 @@ refs.formOrderElem.addEventListener('submit', async e => {
       backgroundColor: '#bbf330',
     });
   } catch (error) {
-    iziToast.error(iziToastErrorObj); // Виведення помилки за допомогою iziToast
+    iziToast.error(iziToastErrorObj);
   }
 });
 
-// Функція для надсилання форми через Axios
 async function sendFormData(data) {
   try {
     const response = await axios.post(
@@ -168,7 +161,6 @@ function onInputEmailValidity() {
   checkFormValidity();
 }
 
-// Функція для перевірки всіх полів та активації кнопки
 function checkFormValidity() {
   const isTextValid =
     !refs.inputTextElem.validity.patternMismatch &&
@@ -191,7 +183,6 @@ function checkFormValidity() {
   }
 }
 
-// Прикріпляємо події до полів форми
 refs.inputTextElem.addEventListener('input', onInputTextValidity);
 refs.inputTelElem.addEventListener('input', onInputTelValidity);
 refs.inputMailElem.addEventListener('input', onInputEmailValidity);
