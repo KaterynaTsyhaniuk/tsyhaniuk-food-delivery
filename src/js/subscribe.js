@@ -13,37 +13,40 @@ const refs = {
   submitBtnElem: document.querySelector('.form-submit-btn'),
 };
 
-const STORAGE_KEY = 'email';
+const STORAGE_KEY = 'subscribe_email';
 
-refs.formElem.addEventListener('input', () => {
-  const formData = new FormData(refs.formElem);
-  const email = formData.get('email').trim();
-  checkInputValidity();
-  saveToLS(STORAGE_KEY, email);
+document.addEventListener('DOMContentLoaded', () => {
+  const savedEmail = loadFromLS(STORAGE_KEY);
+
+  if (savedEmail) {
+    refs.inputMailElem.value = savedEmail;
+    onInputEmailValidity();
+  }
 });
 
-window.addEventListener('DOMContentLoaded', () => {
-  const email = loadFromLS(STORAGE_KEY);
-
-  if (email && refs.formElem.elements.email) {
-    refs.formElem.elements.email.value = email;
-    checkInputValidity();
-  }
+refs.formElem.addEventListener('input', () => {
+  const email = refs.inputMailElem.value.trim();
+  onInputEmailValidity();
+  saveToLS(STORAGE_KEY, email);
 });
 
 refs.formElem.addEventListener('submit', async e => {
   e.preventDefault();
 
-  const formData = new FormData(refs.formElem);
-  const email = formData.get('email');
+  const email = refs.inputMailElem.value.trim();
+
+  if (!emailIsValid(email)) {
+    createErrorMailNotif();
+    return;
+  }
 
   localStorage.removeItem(STORAGE_KEY);
   refs.formElem.reset();
+  clearNotifField();
 
   try {
     await sendFormData({ email });
     showModal();
-    clearNotifField();
   } catch (error) {
     iziToast.error(iziToastErrorObj);
   }
@@ -62,30 +65,30 @@ function loadFromLS(key) {
   }
 }
 
-function checkInputValidity() {
-  if (!refs.inputMailElem) {
-    console.error('Email input element not found');
-    return;
-  }
+function onInputEmailValidity() {
+  const email = refs.inputMailElem.value.trim();
 
-  const isValid = refs.inputMailElem.validity.valid;
-
-  if (!isValid) {
-    refs.submitBtnElem?.setAttribute('disabled', '');
+  if (!emailIsValid(email)) {
     createErrorMailNotif();
   } else {
     refs.spanValidElem.textContent = 'Success!';
     refs.inputMailElem.classList.remove('input-error');
-    refs.spanValidElem?.classList.remove('notif-error');
+    refs.spanValidElem.classList.remove('notif-error');
     refs.inputMailElem.classList.add('input-success');
-    refs.submitBtnElem?.removeAttribute('disabled');
+    refs.submitBtnElem.removeAttribute('disabled');
   }
 }
 
+function emailIsValid(email) {
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailPattern.test(email);
+}
+
 function createErrorMailNotif() {
-  refs.inputMailElem?.classList.add('input-error');
-  refs.spanValidElem?.classList.add('notif-error');
+  refs.inputMailElem.classList.add('input-error');
+  refs.spanValidElem.classList.add('notif-error');
   refs.spanValidElem.textContent = 'Try again! (example@email.com)';
+  refs.submitBtnElem.setAttribute('disabled', '');
 }
 
 async function sendFormData(data) {
@@ -94,16 +97,16 @@ async function sendFormData(data) {
       'https://jsonplaceholder.typicode.com/posts',
       data
     );
-    console.log('Form successfully submitted:', response.data);
+    console.log('Форма успішно відправлена:', response.data);
   } catch (error) {
-    throw new Error('Failed to send form data');
+    throw new Error('Не вдалося відправити дані форми');
   }
 }
 
 function clearNotifField() {
   refs.spanValidElem.textContent = '';
-  refs.inputMailElem?.classList.remove('input-success');
-  refs.spanValidElem?.classList.remove('notif-error');
+  refs.inputMailElem.classList.remove('input-success');
+  refs.spanValidElem.classList.remove('notif-error');
 }
 
 function showModal() {
@@ -128,8 +131,8 @@ refs.backDropElem?.addEventListener('click', event => {
 });
 
 const iziToastErrorObj = {
-  title: 'Error',
-  message: 'Sorry, something went wrong...',
+  title: 'Помилка',
+  message: 'На жаль, щось пішло не так...',
   backgroundColor: 'rgb(224, 55, 63)',
   titleColor: 'rgb(255, 255, 255)',
   messageColor: 'rgb(255, 255, 255)',

@@ -71,7 +71,7 @@
   background: #fff;
   font-size: 12px;
   outline: none;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 
 .footer-form-submit-btn {
@@ -250,6 +250,7 @@
 .footer-valid-notification {
   height: 18px;
   font-size: 10px;
+  display: block;
 }
 
 .footer-valid-notification.notif-error {
