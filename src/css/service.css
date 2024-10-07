@@ -10,7 +10,7 @@
 @media (min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
-  .customer-container {
+  .service-container {
     background-image: url(../img/service-background/Rectangle-694@2x-min.png);
   }
 }
