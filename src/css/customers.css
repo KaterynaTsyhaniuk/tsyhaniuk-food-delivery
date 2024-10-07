@@ -2,7 +2,7 @@
   padding: 60px 20px 60px 20px;
   width: 320px;
   min-height: 769px;
-  background-image: url(../img/customer/customer-m-back-min.png);
+  background-image: url(../img/customer/Rectangle-701-min.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -13,7 +13,7 @@
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
   .customer-container {
-    background-image: url(../img/customer/customer-m-back@2x-min.png);
+    background-image: url(../img/customer/Rectangle-701@2x-min.png);
   }
 }
 
